@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   #root to: "application#hello"
   root to: "pages#home"
+  get "about", to: "pages#about"
 
   get "/up/", to: "up#index", as: :up
   get "/up/databases", to: "up#databases", as: :up_databases
