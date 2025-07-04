@@ -3,3 +3,7 @@ import "@hotwired/turbo-rails"
 
 // Stimulus controllers.
 import "./controllers"
+
+
+import "popper"
+import "bootstrap"
