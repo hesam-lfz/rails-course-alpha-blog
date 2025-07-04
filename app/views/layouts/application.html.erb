@@ -27,9 +27,7 @@
       
 
     <main class="max-w-screen-lg mx-auto mb-auto">
-      <% flash.each do |name, msg| %>
-        <%= msg %>
-      <% end %>
+      <%= render 'layouts/messages' %>
       <%= yield %>
     </main>
 

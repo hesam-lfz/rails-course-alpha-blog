@@ -28,7 +28,8 @@ section {
     margin-bottom: 50px;
 }
 
-a {
+a,
+input[type='submit'] {
     border-style: solid;
     border-radius: 5px;
     padding: 5px;
