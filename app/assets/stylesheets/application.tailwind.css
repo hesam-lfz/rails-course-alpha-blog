@@ -1,6 +1,6 @@
 @import "tailwindcss" source("/app");
 
-/*
+
 main {
     font-family: monospace;
     padding: 2vw;
@@ -37,4 +37,3 @@ input[type='submit'] {
     text-decoration: none;
     text-transform: uppercase;
 }
-    */
