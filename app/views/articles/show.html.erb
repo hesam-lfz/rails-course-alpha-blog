@@ -1,5 +1,6 @@
 <h2>articles details</h2>
 
+<p><strong>Creator: </strong><%= @article.user.nil? ? '-' : @article.user.username  %></p>
 <p><strong>Title: </strong><%= @article.title %></p>
 <p><strong>Description: </strong><%= @article.description %></p>
 

@@ -1,5 +1,6 @@
-class User < ApplicationRecord 
-    VALID_EMAIL_REGEX = /^(([A-Za-z0-9]*\.+*_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\+)|([A-Za-z0-9]+\+))*[A-Z‌​a-z0-9]+@{1}((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,4}$/i
+class User < ApplicationRecord
+    has_many :articles 
+    VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
     validates :username, presence: true, 
                 uniqueness: {case_sensitive: false}, 
                 length: { minimum: 3, maximum: 25 }

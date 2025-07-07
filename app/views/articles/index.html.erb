@@ -4,6 +4,7 @@
     <strong>
     <li>
             <div>
+            <span>Creator</span>
             <span>Title</span>
             <span>Description</span>
             <span>Actions</span>
@@ -13,6 +14,7 @@
     <% @articles.each do |article| %>
         <li>
             <div>
+                <span><%= article.user.nil? ? '-' : article.user.username %></span>
                 <span><%= article.title %></span>
                 <span><%= article.description %></span> 
                 <div>

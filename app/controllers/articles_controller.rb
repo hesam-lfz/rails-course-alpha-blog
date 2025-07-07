@@ -19,6 +19,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
+    @article.user = User.new(username: 'foo', email: 'foo@goo.com')
     if @article.save
         # render plain: @article.inspect
         # redirect_to article_path(@article)
