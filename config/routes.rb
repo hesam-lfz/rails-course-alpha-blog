@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   root to: "articles#index"
   get "about", to: "pages#about"
   resources :articles #, only: [:show, :index, :new, :create, :edit, :update, :destroy]
+  get "signup", to: "users#new"
+  post "signup", to: "users#create"
+  
 
   get "/up/", to: "up#index", as: :up
   get "/up/databases", to: "up#databases", as: :up_databases

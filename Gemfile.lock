@@ -76,11 +76,10 @@ GEM
       public_suffix (>= 2.0.2, < 7.0)
     ast (2.4.3)
     base64 (0.3.0)
+    bcrypt (3.1.20)
     benchmark (0.4.1)
     bigdecimal (3.2.1)
     bindex (0.8.1)
-    bootstrap (5.3.5)
-      popper_js (>= 2.11.8, < 3)
     builder (3.3.0)
     capybara (3.40.0)
       addressable
@@ -96,9 +95,6 @@ GEM
     crass (1.0.6)
     cssbundling-rails (1.4.3)
       railties (>= 6.0.0)
-    dartsass-rails (0.5.1)
-      railties (>= 6.0.0)
-      sass-embedded (~> 1.63)
     date (3.4.1)
     debug (1.10.0)
       irb (~> 1.10)
@@ -115,9 +111,6 @@ GEM
     ffi (1.17.2-x86_64-linux-musl)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    google-protobuf (4.31.1-aarch64-linux-gnu)
-      bigdecimal
-      rake (>= 13)
     hotwire-spark (0.1.13)
       listen
       rails (>= 7.0.0)
@@ -183,7 +176,6 @@ GEM
       ast (~> 2.4.1)
       racc
     pg (1.5.9)
-    popper_js (2.11.8)
     pp (0.6.2)
       prettyprint
     prettyprint (0.2.0)
@@ -285,8 +277,6 @@ GEM
       rubocop-rails (>= 2.30)
     ruby-progressbar (1.13.0)
     rubyzip (2.4.1)
-    sass-embedded (1.89.2-aarch64-linux-gnu)
-      google-protobuf (~> 4.31)
     securerandom (0.4.1)
     selenium-webdriver (4.33.0)
       base64 (~> 0.2)
@@ -340,10 +330,9 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  bootstrap (~> 5.3.3)
+  bcrypt (~> 3.1.7)
   capybara
   cssbundling-rails
-  dartsass-rails
   debug
   hotwire-spark (~> 0.1)
   jbuilder
