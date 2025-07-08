@@ -1,0 +1,31 @@
+<section>
+    <ul>
+    <strong>
+    <li>
+            <div>
+            <span>Creator</span>
+            <span>Title</span>
+            <span>Description</span>
+            <span>Actions</span>
+            </div>
+        </li>
+        </strong>
+    <% @articles.each do |article| %>
+        <li>
+            <div>                
+                <span><%= link_to article.user.username, user_path(article.user) if article.user %></span>
+                <span><%= article.title %></span>
+                <span><%= article.description %></span> 
+                <div>
+                    <span><%= link_to 'Show', article_path(article) %></span>
+                    <span><%= link_to 'Edit', edit_article_path(article) %></span>
+                    <span><%= link_to 'Delete', article_path(article), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></span>
+                </div>
+            </div>
+        </li>
+    <% end %>
+</section>
+<section>
+    <%= link_to 'New', new_article_path %>
+</section>
+</ul>

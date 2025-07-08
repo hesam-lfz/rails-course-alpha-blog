@@ -1,0 +1,12 @@
+<h2>User details</h2>
+
+<%= gravatar_for @user %>
+<p><strong>Username: </strong><%= @user.username %></p>
+<p><strong>Email: </strong><%= @user.email %></p>
+
+<%= render 'articles/article' %>
+
+<div>
+    <%= link_to '←', articles_path %> 
+    <%= link_to 'Edit', edit_user_path(@user) %>    
+</div>
