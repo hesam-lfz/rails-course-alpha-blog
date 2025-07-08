@@ -24,9 +24,10 @@
 
   
   <body class="flex flex-col h-screen justify-between">
-      
+    <%= render 'layouts/header' %>
     
     <main class="max-w-screen-lg mx-auto mb-auto">
+      
       <%= render 'layouts/messages' %>
       <%= yield %>
     </main>

@@ -12,8 +12,8 @@ class UsersController < ApplicationController
     if @user.save
         # render plain: @user.inspect
         # redirect_to article_path(@user)
-        flash[:notice] = "User created."
-        redirect_to @user
+        flash[:notice] = "User #{@user.username} created."
+        redirect_to articles_path
     else
         render 'new'
     end
@@ -26,7 +26,7 @@ class UsersController < ApplicationController
   end
   
   def user_params
-    params.require(:users).permit(:username, :password)
+    params.require(:user).permit(:username, :email, :password)
   end
 
 end

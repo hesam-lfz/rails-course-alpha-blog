@@ -1,8 +1,10 @@
 @import "tailwindcss" source("/app");
 
+body {
+    font-family: monospace;
+}
 
 main {
-    font-family: monospace;
     padding: 2vw;
 }
 
@@ -36,4 +38,8 @@ input[type='submit'] {
     padding: 5px;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+.right {
+    float: right;
 }

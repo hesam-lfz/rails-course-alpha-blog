@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   get "about", to: "pages#about"
   resources :articles #, only: [:show, :index, :new, :create, :edit, :update, :destroy]
   get "signup", to: "users#new"
-  post "signup", to: "users#create"
-  
+  #post "signup", to: "users#create"
+  resources :users, except: [:new]
 
   get "/up/", to: "up#index", as: :up
   get "/up/databases", to: "up#databases", as: :up_databases
