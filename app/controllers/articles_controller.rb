@@ -13,10 +13,6 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
-  def edit    
-  end
-
-
   def create
     @article = Article.new(article_params)
     @article.user = User.new(username: 'foo', email: 'foo@goo.com')
@@ -28,6 +24,9 @@ class ArticlesController < ApplicationController
     else
         render 'new'
     end
+  end
+
+  def edit    
   end
 
   def update    
