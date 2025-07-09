@@ -39,6 +39,9 @@ gem "redis", "~> 5.2"
 # Use Actice Model has_secure_password
 gem "bcrypt", "~> 3.1.7"
 
+# Pagination:
+gem 'will_paginate', '~> 4.0'
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
