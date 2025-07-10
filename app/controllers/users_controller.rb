@@ -22,6 +22,7 @@ class UsersController < ApplicationController
     if @user.save
         # render plain: @user.inspect
         # redirect_to article_path(@user)
+        session[:user_id] = @user.id
         flash[:notice] = "User #{@user.username} created."
         redirect_to articles_path
     else
