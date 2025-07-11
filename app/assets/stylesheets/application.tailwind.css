@@ -48,6 +48,22 @@ input[type='submit'] {
     float: right;
 }
 
+.alert {
+    border-style: groove;
+    border-width: 2px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    background-color: whitesmoke;
+    font-style: oblique;
+    font-weight: 800;
+    font-size: large;
+}
+
 .danger {
     color: red;
+}
+
+.success {
+    color: green;
 }
