@@ -82,8 +82,16 @@ EXPOSE 8000
 #CMD ["rails", "generate", "migration", "add_user_id_to_articles"]
 #CMD ["rails", "generate", "migration", "add_password_to_users"]
 #CMD ["rails", "generate", "migration", "add_admin_to_users"]
+#CMD ["rails", "generate", "migration", "create_categories"]
+
 #CMD ["rails", "db:migrate"]
 #CMD ["rails", "db:rollback"]
+
+#CMD ["rails", "generate", "test_unit:scaffold", "category"]
+
+#CMD ["rails", "test"]
+#CMD ["rails", "test", "test/constrollers"]
+#CMD ["rails", "test", "test/constrollers/categories_controller_test.rb"]
 
 CMD ["rails", "s"]
 
