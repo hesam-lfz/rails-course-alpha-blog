@@ -3,10 +3,10 @@
 <%= gravatar_for @user %>
 <p><strong>Username: </strong><%= @user.username %></p>
 <p><strong>Email: </strong><%= @user.email %></p>
-<% if current_user == @user %>
+<% if logged_in? && (current_user == @user || current_user.admin?) %>
     <div>
-        <%= link_to "Edit profile", edit_user_path(@user) %>
-        <%= link_to "Delete profile", user_path(@user),  data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: 'danger' %>
+        <%= link_to "Edit profile", edit_user_path(@user) %> 
+        <%= link_to "Delete profile", user_path(@user), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: 'danger' if current_user.admin? %> 
     </div>
 <% end %>
 
@@ -17,8 +17,8 @@
 
 <div>
     <%= link_to '←', articles_path %> 
-    <% if current_user == @user %>
+    <% if logged_in? && (current_user == @user || current_user.admin?) %>
         <%= link_to 'Edit', edit_user_path(@user) %>  
-        <%= link_to "Delete profile", user_path(@user),  data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: 'danger' %> 
+        <%= link_to "Delete profile", user_path(@user),  data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: 'danger' if current_user.admin? %> 
     <% end %>
 </div>
