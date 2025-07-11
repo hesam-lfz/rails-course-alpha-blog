@@ -47,3 +47,7 @@ input[type='submit'] {
 .right {
     float: right;
 }
+
+.danger {
+    color: red;
+}

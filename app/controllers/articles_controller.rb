@@ -29,7 +29,7 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def edit    
+  def edit
   end
 
   def update    
@@ -41,7 +41,7 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def destroy    
+  def destroy
     @article.destroy
     redirect_to articles_path
   end
