@@ -2,7 +2,7 @@
     <h2>Errors for <%= obj.class.name.downcase %>: </h2>
     <ul>
     <% obj.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <li class="danger"><%= msg %></li>
     <% end %>
     </ul>
 <% end %>

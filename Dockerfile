@@ -88,6 +88,9 @@ EXPOSE 8000
 #CMD ["rails", "db:rollback"]
 
 #CMD ["rails", "generate", "test_unit:scaffold", "category"]
+#CMD ["rails", "generate", "integration_test", "create_category"]
+#CMD ["rails", "generate", "integration_test", "list_categories"]
+
 
 #CMD ["rails", "test"]
 #CMD ["rails", "test", "test/constrollers"]
