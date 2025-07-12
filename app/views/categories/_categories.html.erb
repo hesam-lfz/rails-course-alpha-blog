@@ -1,0 +1,24 @@
+<section>
+    <ul>
+        <strong>
+            <li>
+                <div>
+                <span>Name</span>
+                <span>Created at</span>
+                <span>Actions</span>
+                </div>
+            </li>
+        </strong>    
+    <% @categories.each do |category| %>
+        <li>
+            <div>                
+                <span><%= link_to category.name, category %></span>                
+                <span>Created <%= time_ago_in_words(category.created_at) %> ago</span> 
+                <div>
+                    <span><%= link_to 'Show', category %></span>
+                </div>
+            </div>
+        </li>
+    <% end %>
+</ul>
+</section>

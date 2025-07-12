@@ -5,8 +5,11 @@
     <p><%= gravatar_for @article.user %></p>
 <% end %>
 <p><strong>Title: </strong><%= @article.title %></p>
+<p><strong>Categories: </strong>
+<p><%= render @article.categories %></p>
+</p>
 <p><strong>Description: </strong><%= @article.description %></p>
-
+<p><span><%= time_ago_in_words(@article.created_at) %> ago</p> 
 <div>
     <%= link_to '←', articles_path %> 
     <% if current_user == @article.user || current_user.admin? %>

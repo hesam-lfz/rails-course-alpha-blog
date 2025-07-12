@@ -56,6 +56,12 @@ input[type='submit'] {
     padding-top: 30px;
 }
 
+input:not([type='submit']),
+textarea,
+select {
+    width: 50vw;
+}
+
 .alert {
     border-style: groove;
     border-width: 2px;
