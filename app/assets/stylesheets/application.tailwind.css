@@ -48,6 +48,14 @@ input[type='submit'] {
     float: right;
 }
 
+.left {
+    float: left;
+}
+
+.header {
+    padding-top: 30px;
+}
+
 .alert {
     border-style: groove;
     border-width: 2px;

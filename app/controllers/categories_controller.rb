@@ -1,7 +1,8 @@
 class CategoriesController < ApplicationController
 
   before_action :set_category, only: [:show, :edit, :update]
-  
+  before_action :require_admin, except: [:index, :show]
+
   def show
   end
   
@@ -19,7 +20,7 @@ class CategoriesController < ApplicationController
         # render plain: @article.inspect
         # redirect_to article_path(@article)
         flash[:notice] = "Category created."
-        redirect_to @category
+        redirect_to @categories_url
     else
         render 'new'
     end
