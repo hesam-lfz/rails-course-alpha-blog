@@ -4,6 +4,7 @@
             <li>
                 <div>
                 <span>Name</span>
+                <span>#Articles</span>
                 <span>Created at</span>
                 <span>Actions</span>
                 </div>
@@ -12,7 +13,8 @@
     <% @categories.each do |category| %>
         <li>
             <div>                
-                <span><%= link_to category.name, category %></span>                
+                <span><%= link_to category.name, category %></span>
+                <span><%= pluralize(category.articles.length, 'article') %></span>         
                 <span>Created <%= time_ago_in_words(category.created_at) %> ago</span> 
                 <div>
                     <span><%= link_to 'Show', category %></span>

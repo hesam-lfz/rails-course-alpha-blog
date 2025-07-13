@@ -4,6 +4,7 @@ class CategoriesController < ApplicationController
   before_action :require_admin, except: [:index, :show]
 
   def show
+    @articles = @category.articles.paginate(page: params[:page], per_page: 5)
   end
   
   def index
@@ -20,7 +21,7 @@ class CategoriesController < ApplicationController
         # render plain: @article.inspect
         # redirect_to article_path(@article)
         flash[:notice] = "Category created."
-        redirect_to @categories_url
+        redirect_to categories_path
     else
         render 'new'
     end

@@ -1,6 +1,13 @@
 <h2>Category details</h2>
 
 <p><strong>Name: </strong><%= @category.name %></p>
+<p><strong>Current Articles: </strong><%= pluralize(@category.articles.length, 'article') %></p>
+
+<h2>Current articles</h2>
+<%= will_paginate @articles %>
+<%= render 'articles/article' %>
+<%= will_paginate @articles %>
+
 
 <div>
     <%= link_to '←', categories_path %>
