@@ -17,7 +17,10 @@
                 <span><%= pluralize(category.articles.length, 'article') %></span>         
                 <span>Created <%= time_ago_in_words(category.created_at) %> ago</span> 
                 <div>
-                    <span><%= link_to 'Show', category %></span>
+                    <span><%= link_to 'Show', category %></span>                    
+                     <% if logged_in? && current_user.admin? %>
+                        <span><%= link_to 'Edit', edit_category_path(category) %></span>
+                    <% end %>
                 </div>
             </div>
         </li>

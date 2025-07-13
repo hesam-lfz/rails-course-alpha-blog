@@ -3,6 +3,13 @@
 <p><strong>Name: </strong><%= @category.name %></p>
 <p><strong>Current Articles: </strong><%= pluralize(@category.articles.length, 'article') %></p>
 
+<% if logged_in? && current_user.admin? %>
+    <div>
+        <%= link_to "Edit category", edit_category_path(@category) %>         
+    </div>
+<% end %>
+
+
 <h2>Current articles</h2>
 <%= will_paginate @articles %>
 <%= render 'articles/article' %>
